@@ -20,6 +20,9 @@ jobs:
       - name: Clean and Build APK
         run: ./gradlew clean assembleDebug --stacktrace
       
+      - name: List files in the build directory
+        run: ls -alh app/build/outputs/apk/debug/  # Vérifiez que le fichier APK existe
+      
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
