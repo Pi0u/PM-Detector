@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PM Detector</string>
+    <string name="start_monitoring">Démarrer la surveillance</string>
+    <string name="stop_monitoring">Arrêter la surveillance</string>
+    <string name="monitoring_active">Surveillance active</string>
+    <string name="monitoring_inactive">Surveillance inactive</string>
+    <string name="monitoring_stopped">Surveillance arrêtée</string>
+</resources>
