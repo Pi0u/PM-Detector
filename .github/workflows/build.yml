@@ -3,7 +3,7 @@ on: push
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # On force Ubuntu 22.04 au lieu de latest
     steps:
       - uses: actions/checkout@v3
       
