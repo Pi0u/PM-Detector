@@ -3,7 +3,8 @@ on: push
 
 jobs:
   build:
-    runs-on: ubuntu-22.04  # On force Ubuntu 22.04 au lieu de latest
+    runs-on: ubuntu-22.04  # Utilisation d'Ubuntu 22.04
+
     steps:
       - uses: actions/checkout@v3
       
@@ -13,14 +14,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
-      
       - name: Make Gradle executable
         run: chmod +x ./gradlew
       
-      - name: Build APK
-        run: ./gradlew assembleDebug --stacktrace
+      - name: Clean and Build APK
+        run: ./gradlew clean assembleDebug --stacktrace
       
       - name: Upload APK
         uses: actions/upload-artifact@v3
